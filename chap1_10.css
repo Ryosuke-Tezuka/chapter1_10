@@ -1,0 +1,346 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+h1{
+	font-size: 32px;
+}
+h3{
+	font-size: 20px;
+}
+p{
+	font-size: 16px;
+}
+
+header{
+	height: 70px;
+	background-color: #EC715F;
+}
+.navi-contents{
+	width: 1024px;
+	margin: 0 auto;
+	position: relative;
+}
+.navi-image{
+	height: 70px;
+}
+.navi-list-box{
+	position: absolute;
+	top: 22px;
+	right: 30px;
+	/* 右への配置の仕方がわからず、positionにて無理矢理修正 */
+}
+.navi-list-item{
+	display: inline-block;
+	margin: 0 30px;
+}
+.navi-list-item:last-child{
+	margin: 0 0 0 30px;
+}
+a{
+	text-decoration: none;
+	color: #FAFAFA;
+}
+
+.main-visual{
+	height: 650px;
+	background-image: url(img/mv.png);
+	background-size: cover;
+	background-position: center;
+}
+.main-visual-contents{
+	text-align: center;
+	color: #FAFAFA;
+	padding-top: 200px;
+	font-size: 64px;
+}
+.main-visual-text{
+	text-align: center;
+	color: #FAFAFA;
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+.portfolio{
+	background-color: #ECEFF1;
+}
+.section-headline{
+	text-align: center;
+	padding-top: 90px;
+	padding-bottom: 8px;
+}
+.underline{
+	height: 3px;
+	width: 70px;
+	background-color: #EC715F;
+	margin: 0 auto;
+}
+.section-text{
+	text-align: center;
+	margin: 30px 0;
+}
+.portfolio-contents{
+	width: 920px;
+	padding-bottom: 90px;
+	margin: 0 auto;
+}
+.portfolio-image{
+	width: 300px;
+	height: 250px;
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+.portfolio-image:nth-child(1){
+	background-image: url(img/sketch.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.portfolio-image:nth-child(2){
+	background-image: url(img/websuku.png);
+	background-size: cover;
+	background-position: center;
+}
+.portfolio-image:nth-child(3){
+	background-image: url(img/write.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.portfolio-image:nth-child(4){
+	background-image: url(img/webcamp.png);
+	background-size: cover;
+	background-position: center;
+}
+.portfolio-image:nth-child(5){
+	background-image: url(img/talk.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.portfolio-image:nth-child(6){
+	background-image: url(img/webcamp-mother.png);
+	background-size: cover;
+	background-position: center;
+}
+.portfolio-image:nth-child(3n){
+	margin-right: 0;
+}
+.portfolio-image:nth-child(n+4){
+	margin-bottom: 0;
+}
+
+.feature-contents{
+	width: 980px;
+	margin: 0 auto;
+}
+.feature-item{
+	width: 320px;
+	float: left;
+	text-align: center;
+	margin-right: 10px;
+	padding-bottom: 90px;
+}
+.feature-item:last-child{
+	margin-right: 0;
+}
+.feature-item i{
+	font-size: 60px;
+	padding: 15px 0;
+	/* 見た目が揃わなかったのでpaddingを入れて修正 */
+}
+.feature-headline{
+	font-size: 20px;
+	padding: 10px 0;
+}r
+.feature-text{
+	text-align: left;
+}
+
+.profile{
+	background-color: #ECEFF1;
+}
+.profile-contents{
+	width: 1024px;
+	margin: 0 auto;
+	padding-bottom: 90px;
+}
+.profile-item{
+	width: 512px;
+	float: left;
+}
+.profile-item:first-child{
+	text-align: center;
+}
+.profile-image{
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+}
+.profile-text{
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+.contact-contents{
+	width: 800px;
+	margin: 0 auto;
+	padding-bottom: 90px;
+}
+.contact-item{
+	width: 400px;
+	float: left;
+}
+.contact-box{
+	width: 200px;
+	margin: 0 auto;
+}
+.contact-headline{
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+
+/* Mailだけに適応したかったけれど、なぜかSNSにも適応されてしまった */
+.contact-headline:first-child{
+	padding-top: 0;
+}
+.contact-link{
+	color: #000000;
+	text-decoration: underline;
+}
+.social i{
+	font-size: 50px;
+	padding-top: 5px;
+	padding-right: 20px;
+}
+footer{
+	height: 60px;
+	background-color: #EC715F;
+}
+.footer-text{
+	color: #FAFAFA;
+	text-align: center;
+	padding-top: 18px;
+}
+
+@media screen and (max-width:768px){
+	body{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.navi-list-box{
+		display: none;
+	}
+	.navi-contents{
+		width: 90%;
+		position: relative;
+	}
+	header i{
+		font-size: 40px;
+		position: absolute;
+		top: 5px;
+		right: 0px;
+		color: white;
+		border: 1px solid white;
+		padding: 9px;
+	}
+	.main-visual{
+	height: 650px;
+	background-image: url(img/code.png);
+	background-size: cover;
+	background-position: center;
+	}
+	.main-visual-contents{
+		width: 90%;
+		font-size: 40px;
+		margin: 0 auto;
+	}
+	.main-visual-text{
+		width: 90%;
+		font-size: 18px;
+		margin: 0 auto;
+	}
+	.portfolio{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.section-text{
+		width: 90%;
+		margin: 30px auto;
+	}
+	.portfolio-contents{
+		width: 90%;
+	}
+	.portfolio-image{
+		float: none;
+	}
+	.portfolio-image:nth-child(odd){
+		display: none;
+	}
+	.portfolio-image:nth-child(even){
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.portfolio-image:last-child{
+		margin-bottom: 0;
+	}
+	.feature-contents{
+		width: 90%;
+		margin-bottom: 90px;
+	}
+	.feature-item{
+		float: none;
+		width: 90%;
+		margin: 0 auto;
+		padding-bottom: 10px;
+	}
+	.feature-item:last-child{
+		margin-right: auto;
+	}
+	.feature-item i{
+		padding: 0;
+	}
+	.feature-text{
+		text-align: left;
+	}
+	br{
+		display: none;
+	}
+	.profile{
+		text-align: center;
+	}
+	.profile-contents{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.profile-item{
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+	.profile-headline{
+		padding-top: 20px;
+	}
+	.profile-text{
+		padding-bottom: 0;
+		word-wrap: break-word;
+	}
+	.contact{
+		text-align: center;
+	}
+	.contact-contents{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.contact-item{
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+	.space{
+		width: 100%;
+	}
+}
